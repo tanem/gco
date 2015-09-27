@@ -1,4 +1,4 @@
-export default function (generator) {
+export default (generator) => {
   return new Promise((resolve) => {
     const iterator = generator();
     const next = ({ value, done }) => {
