@@ -1,0 +1,49 @@
+{
+  "name": "gco",
+  "version": "1.0.0",
+  "description": "Generator based flow control.",
+  "main": "build/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "echo '=> cleaning' && rm -rf build",
+    "prebuildsrc": "npm run clean -s",
+    "buildsrc": "echo '=> building source' && babel --optional runtime src/ -d build/src/ && babel index.es6 -d build/",
+    "prebuild": "npm run buildsrc -s",
+    "build": "echo '=> building' && babel --optional runtime example/ -d build/example/ && babel --optional runtime test/ -d build/test/",
+    "pretest": "npm run build -s",
+    "test": "echo '=> testing' && node ./node_modules/.bin/tape build/test/**/*.test.js",
+    "preexample": "npm run build -s",
+    "example": "echo '=> running example' && node build/example",
+    "postinstall": "npm run buildsrc -s"
+  },
+  "keywords": [
+    "async",
+    "flow",
+    "generator",
+    "coro",
+    "coroutine",
+    "control"
+  ],
+  "author": {
+    "name": "Tane Morgan",
+    "url": "http://github.com/tanem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tanem/gco.git"
+  },
+  "homepage": "https://github.com/tanem/gco",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "tape": "^4.2.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.8.25"
+  }
+}
