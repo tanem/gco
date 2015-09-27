@@ -1,10 +1,12 @@
 import gco from '..';
 
+const onError = ({ stack }) => console.error(stack);
+
 // Yield any promise.
 gco(function* () {
   const result = yield Promise.resolve(true);
   console.log(result);
-  // true
+  // -> true
 }).catch(onError);
 
 // Resolve multiple promises in parallel.
@@ -14,7 +16,7 @@ gco(function* () {
   const c = Promise.resolve(3);
   const result = yield [a, b, c];
   console.log(result);
-  // [1, 2, 3]
+  // -> [1, 2, 3]
 }).catch(onError);
 
 // Errors can be try/catched.
@@ -23,10 +25,6 @@ gco(function* () {
     yield Promise.reject(new Error('boom'));
   } catch (error) {
     console.error(error.message);
-    // 'boom'
+    // -> 'boom'
   }
 }).catch(onError);
-
-function onError(error) {
-  console.error(error.stack);
-}
