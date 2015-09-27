@@ -1,6 +1,6 @@
 {
   "name": "gco",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generator based flow control that supports promises.",
   "main": "build/index.js",
   "directories": {
