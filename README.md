@@ -26,7 +26,7 @@ $ npm i gco
 ## Usage
 
 ```js
-import gco from '..';
+import gco from 'gco';
 
 const onError = ({ stack }) => console.error(stack);
 
