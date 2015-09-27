@@ -1,6 +1,6 @@
 # gco
 
-[![Travis build status](http://img.shields.io/travis/tanem/gco.svg?style=flat)](https://travis-ci.org/tanem/gco)
+[![Build Status](https://travis-ci.org/tanem/gco.png?branch=master)](https://travis-ci.org/tanem/gco)
 [![Dependency Status](https://david-dm.org/tanem/gco.svg)](https://david-dm.org/tanem/gco)
 [![devDependency Status](https://david-dm.org/tanem/gco/dev-status.svg)](https://david-dm.org/tanem/gco#info=devDependencies)
 
