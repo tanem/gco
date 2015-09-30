@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/tanem/gco.svg)](https://david-dm.org/tanem/gco)
 [![devDependency Status](https://david-dm.org/tanem/gco/dev-status.svg)](https://david-dm.org/tanem/gco#info=devDependencies)
 
-Generator based flow-control that supports promises.
+**G**enerator based flow-**co**ntrol that supports promises.
 
 ## Motivation
 
