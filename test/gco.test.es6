@@ -8,6 +8,10 @@ const getPromise = (val, err) => {
   });
 };
 
+const sleep = (ms) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
 test('yielding a non-promise', (t) => {
   t.plan(1);
   gco(function* () {
@@ -37,7 +41,7 @@ test('yielding several promises', (t) => {
   });
 });
 
-test('when a promise is rejected it should throw and resume', (t) => {
+test('throw and resume when a promise is rejected ', (t) => {
   t.plan(2);
   gco(function* () {
     try {
@@ -65,7 +69,7 @@ test('returning a resolved promise', (t) => {
 });
 
 test('returning a rejected promise', (t) => {
-  t.plan(1); 
+  t.plan(1);
   gco(function* () {
     return Promise.reject(1);
   }).catch((actual) => t.equal(actual, 1));
@@ -82,7 +86,7 @@ test('catching errors', (t) => {
   });
 });
 
-test('yielding an array of promises', (t) => {
+test('yielding an array', (t) => {
   t.plan(1);
   gco(function* () {
     const actual = yield [
@@ -99,5 +103,52 @@ test('yielding an empty array', (t) => {
   gco(function* () {
     const actual = yield [];
     t.deepEqual(actual, []);
+  });
+});
+
+test('yielding an object', (t) => {
+  t.plan(1);
+  gco(function* () {
+
+    const a = Promise.resolve(1);
+    const b = Promise.resolve(2);
+    const c = Promise.resolve(3);
+
+    const actual = yield {
+      a: a,
+      b: b,
+      c: c
+    };
+
+    t.deepEqual(actual, { a: 1, b: 2, c: 3 });
+
+  });
+});
+
+test('yielding an empty object', (t) => {
+  t.plan(1);
+  gco(function* () {
+    const actual = yield {};
+    t.deepEqual(actual, {});
+  });
+});
+
+test('preserving key order when yielding an object', (t) => {
+  t.plan(1);
+  gco(function* () {
+
+    const before = {
+      first: sleep(30),
+      second: sleep(20),
+      third: sleep(10)
+    };
+
+    const after = yield before;
+
+    const actualKeys = Object.keys(after);
+    const expectedKeys = Object.keys(before);
+
+    t.deepEqual(actualKeys, expectedKeys);
+
   });
 });

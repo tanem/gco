@@ -38,7 +38,7 @@ gco(function* () {
   // -> true
 }).catch(onError);
 
-// Resolve multiple promises in parallel.
+// Yield an array to resolve multiple promises in parallel.
 gco(function* () {
   const a = Promise.resolve(1);
   const b = Promise.resolve(2);
@@ -46,6 +46,16 @@ gco(function* () {
   const result = yield [a, b, c];
   console.log(result);
   // -> [1, 2, 3]
+}).catch(onError);
+
+// Yield an object to resolve multiple promises in parallel.
+gco(function* () {
+  const res = yield {
+    1: Promise.resolve(1),
+    2: Promise.resolve(2),
+  };
+  console.log(res);
+  // -> { 1: 1, 2: 2 }
 }).catch(onError);
 
 // Errors can be try/catched.

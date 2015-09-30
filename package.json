@@ -44,6 +44,7 @@
     "tape": "^4.2.0"
   },
   "dependencies": {
-    "babel-runtime": "^5.8.25"
+    "babel-runtime": "^5.8.25",
+    "is-promise": "^2.1.0"
   }
 }
