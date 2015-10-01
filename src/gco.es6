@@ -1,13 +1,13 @@
 import isPromise from 'is-promise';
 
-let toPromise = (value) => {
+const toPromise = (value) => {
   if (isPromise(value)) return value;
   if (Array.isArray(value)) return Promise.all(value);
   if (typeof value === 'object') return objectToPromise(value);
   return Promise.resolve(value);
 };
 
-let objectToPromise = (object) => {
+const objectToPromise = (object) => {
 
   const map = new Map();
 
@@ -25,8 +25,6 @@ let objectToPromise = (object) => {
   });
 
 };
-
-// TODO: Handle rejected promises from within the object? (see how .all handles rejections). try catches etc in tests, which co doesn't have.
 
 export default (generator) => {
   return new Promise((resolve) => {
