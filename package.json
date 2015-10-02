@@ -36,9 +36,6 @@
   },
   "homepage": "https://github.com/tanem/gco",
   "license": "MIT",
-  "engines": {
-    "node": ">=4.0.0"
-  },
   "devDependencies": {
     "babel": "^5.8.23",
     "tape": "^4.2.0"

@@ -13,10 +13,12 @@ Developed for a specific use-case, and for learning purposes. Heavily inspired b
 
 ## Compatibility
 
-- For node <0.11.0 and for many older browsers, you should include your own promise polyfill.
-- When using node >=0.11.0 <=0.12.7, you must use the `--harmony-generators` flag or just `--harmony` to get access to generators.
-- When using node <0.11.0, or browsers without generator support, you must use [gnode](https://github.com/TooTallNate/gnode) and/or [regenerator](https://github.com/facebook/regenerator).
-- Node >=4.0.0 and io.js are supported out of the box, you can use `gco` without flags or polyfills.
+[Babel](https://github.com/babel/babel) is used to transpile ES2015 to ES5. `gco` is tested against:
+
+- The latest stable Node.js release
+- The latest published patch release for Node.js v0.12
+- The latest published patch release for Node.js v0.10
+- The latest stable io.js release
 
 ## Installation
 
