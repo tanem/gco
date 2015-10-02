@@ -4,6 +4,8 @@
   "description": "Generator based flow control that supports promises.",
   "main": "build/index.js",
   "directories": {
+    "example": "example",
+    "lib": "src",
     "test": "test"
   },
   "scripts": {
