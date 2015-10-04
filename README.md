@@ -21,6 +21,7 @@ Developed for a specific use-case, and for learning purposes. Heavily inspired b
 - The latest published patch release for Node.js v0.12
 - The latest published patch release for Node.js v0.10
 - The latest stable io.js release
+- The browsers listed in the build matrix above.
 
 ## Installation
 
