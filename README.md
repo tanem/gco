@@ -1,11 +1,13 @@
 # gco
 
+**G**enerator based flow-**co**ntrol that supports promises.
+
 [![NPM version](https://badge.fury.io/js/gco.svg)](http://badge.fury.io/js/gco)
 [![Build Status](https://travis-ci.org/tanem/gco.png?branch=master)](https://travis-ci.org/tanem/gco)
 [![Dependency Status](https://david-dm.org/tanem/gco.svg)](https://david-dm.org/tanem/gco)
 [![devDependency Status](https://david-dm.org/tanem/gco/dev-status.svg)](https://david-dm.org/tanem/gco#info=devDependencies)
 
-**G**enerator based flow-**co**ntrol that supports promises.
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/tanemorgangco.svg)](https://saucelabs.com/u/tanemorgangco)
 
 ## Motivation
 
