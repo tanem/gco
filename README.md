@@ -88,7 +88,7 @@ Returns a promise that resolves a generator.
 ## Tests
 
 ```js
-$ npm test -s
+$ npm run test-local -s
 ```
 
 ## License
