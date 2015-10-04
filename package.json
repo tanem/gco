@@ -9,17 +9,9 @@
     "test": "test"
   },
   "scripts": {
-    "clean": "echo '=> cleaning' && rm -rf build",
-    "lint": "echo '=> linting' && eslint index.es6 example/ src/ test/",
-    "prebuildsrc": "npm run clean -s && npm run lint -s",
-    "buildsrc": "echo '=> building source' && babel --optional runtime src/ -d build/src/ && babel index.es6 -d build/",
-    "prebuild": "npm run buildsrc -s",
-    "build": "echo '=> building' && babel --optional runtime example/ -d build/example/ && babel --optional runtime test/ -d build/test/",
-    "pretest": "npm run build -s",
-    "test": "echo '=> testing' && node ./node_modules/.bin/tape build/test/**/*.test.js",
-    "preexample": "npm run build -s",
-    "example": "echo '=> running example' && node build/example",
-    "postinstall": "npm run buildsrc -s"
+    "test": "node bin/test",
+    "test-local": "node bin/test-local",
+    "example": "node bin/example"
   },
   "keywords": [
     "async",
@@ -42,7 +34,10 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "eslint": "^1.6.0",
-    "tape": "^4.2.0"
+    "shelljs": "^0.5.3",
+    "shelljs-nodecli": "^0.1.1",
+    "tape": "^4.2.0",
+    "zuul": "^3.6.0"
   },
   "dependencies": {
     "babel-runtime": "^5.8.25",
