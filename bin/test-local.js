@@ -3,5 +3,5 @@
 require('./clean');
 require('./lint');
 require('./transpile');
-require('./tape');
+require('./test-node');
 require('./test-browser-local');
