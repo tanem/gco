@@ -4,4 +4,6 @@ require('./clean');
 require('./lint');
 require('./transpile');
 require('./test-node');
-require('./test-browser-ci');
+if (process.env.BROWSER_TEST) {
+  require('./test-browser-ci');
+}
