@@ -34,7 +34,7 @@ export default (generator) => {
       toPromise(value)
         .then((value) => next(iterator.next(value)))
         .catch((reason) => next(iterator.throw(reason)));
-    }
+    };
     next(iterator.next());
   });
 };
