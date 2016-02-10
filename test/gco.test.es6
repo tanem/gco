@@ -1,5 +1,5 @@
 import test from 'tape';
-import gco from '..';
+import gco from '../src/gco';
 
 const getPromise = (val, err) => {
   return new Promise((resolve, reject) => {
