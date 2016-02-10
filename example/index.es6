@@ -1,4 +1,4 @@
-import gco from '..';
+import gco from '../src/gco';
 
 const onError = ({ stack }) => console.error(stack);
 
