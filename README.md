@@ -2,7 +2,7 @@
 
 **G**enerator based flow-**co**ntrol that supports promises.
 
-[![build status](https://img.shields.io/travis/tanem/gco/master.svg?style=flat-square)](https://travis-ci.org/tanem/gco)
+[![build status](https://img.shields.io/travis/tanem/gco.svg?style=flat-square)](https://travis-ci.org/tanem/gco)
 [![coverage status](https://img.shields.io/coveralls/tanem/gco.svg?style=flat-square)](https://coveralls.io/github/tanem/gco)
 [![npm version](https://img.shields.io/npm/v/gco.svg?style=flat-square)](https://www.npmjs.com/package/gco)
 [![npm downloads](https://img.shields.io/npm/dm/gco.svg?style=flat-square)](https://www.npmjs.com/package/gco)
