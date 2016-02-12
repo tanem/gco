@@ -3,6 +3,7 @@
 **G**enerator based flow-**co**ntrol that supports promises.
 
 [![build status](https://img.shields.io/travis/tanem/gco/master.svg?style=flat-square)](https://travis-ci.org/tanem/gco)
+[![coverage status](https://img.shields.io/coveralls/tanem/gco.svg?style=flat-square)](https://coveralls.io/github/tanem/gco)
 [![npm version](https://img.shields.io/npm/v/gco.svg?style=flat-square)](https://www.npmjs.com/package/gco)
 [![npm downloads](https://img.shields.io/npm/dm/gco.svg?style=flat-square)](https://www.npmjs.com/package/gco)
 [![dependency status](https://david-dm.org/tanem/gco.svg?style=flat-square)](https://david-dm.org/tanem/gco)
@@ -19,9 +20,7 @@ Developed for a specific use-case, and for learning purposes. Heavily inspired b
 [Babel](https://github.com/babel/babel) is used to transpile ES2015 to ES5. `gco` is tested against:
 
 - The latest stable Node.js release
-- The latest published patch release for Node.js v0.12
-- The latest published patch release for Node.js v0.10
-- The latest stable io.js release
+- The latest LTS Node.js release
 - The browsers listed in the build matrix above.
 
 ## Installation
@@ -90,7 +89,7 @@ Returns a promise that resolves a generator.
 ## Tests
 
 ```js
-$ npm run test-local -s
+$ npm run test:local
 ```
 
 ## License

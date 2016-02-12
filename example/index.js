@@ -1,3 +1,5 @@
+/* eslint no-console: 0 */
+
 import gco from '../src/gco';
 
 const onError = ({ stack }) => console.error(stack);
@@ -23,7 +25,7 @@ gco(function* () {
 gco(function* () {
   const res = yield {
     1: Promise.resolve(1),
-    2: Promise.resolve(2),
+    2: Promise.resolve(2)
   };
   console.log(res);
   // -> { 1: 1, 2: 2 }
