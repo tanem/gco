@@ -1,0 +1,2 @@
+- Test against the built file
+- Don't enforce promise and generator implementations?
